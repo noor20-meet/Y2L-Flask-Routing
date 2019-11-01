@@ -1,37 +1,10 @@
 <!DOCTYPE html>
-<html>
 <head>
+	<title> Store </title>
 	<link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css' integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-	<title>Store</title>
+</head>
 	<style>
-		.card {
-		  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-		  max-width: 300px;
-		  margin: auto;
-		  text-align: center;
-		  font-family: arial;
-		}
 
-		.price {
-		  color: grey;
-		  font-size: 22px;
-		}
-
-		.card button {
-		  border: none;
-		  outline: 0;
-		  padding: 12px;
-		  color: white;
-		  background-color: #000;
-		  text-align: center;
-		  cursor: pointer;
-		  width: 100%;
-		  font-size: 18px;
-		}
-
-		.card button:hover {
-		  opacity: 0.7;
-		}
 		ul {
 		  list-style-type: none;
 		  margin: 0;
@@ -52,55 +25,95 @@
 		  text-decoration: none;
 		}
 
-		li a:hover:not(.active1) {
+		li a:hover:not(.active) {
 		  background-color: #111;
 		}
 
-		.active1 {
-		  background-color: #4CAF50;
-		}
 	</style>
-</head>
+
 <body>
 	<ul>
 		<li><a href="/"> Home </a></li>
 		<li><a href="{{url_for('store')}}"> Store </a> </li>
-		<li style="float: right;" class="active1"><a href="{{url_for('about')}}" > About </a></li>
+		<li style="float: right; background-color: #4CAF50;"><a href="{{url_for('about')}}" > About </a></li>
 	</ul>
 
-	<div class="container">
-		<div class="row">
-			</div>
-			<div class="col-10" style="position:relative; display: block; margin:0 auto;">
-				<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-				  <ol class="carousel-indicators">
-				    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-				    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-				    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-				  </ol>
-				  <div class="carousel-inner">
-				    <div class="carousel-item active">
-				      <img src="woven.jpg" class="d-block w-100" alt="...">
-				    </div>
-				    <div class="carousel-item">
-				      <img src="fox.jpg" class="d-block w-100" alt="...">
-				    </div>
-				    <div class="carousel-item">
-				      <img src="white_tiger.jpeg" class="d-block w-100" alt="...">
-				    </div>
-				  </div>
-				  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-				    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-				    <span class="sr-only">Previous</span>
-				  </a>
-				  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-				    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-				    <span class="sr-only">Next</span>
-				  </a>
-				</div>
-			</div>
-		</div>
-	</div>
+	<br><br><br>
 
+		<!-- second row -->
+		<div class="bd-example text-center" style="position:relative; display: block; margin:0 auto; width: 50%;">
+		
+		  <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+		    <ol class="carousel-indicators">
+		      <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+		      <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+		      <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+		      <li data-target="#carouselExampleCaptions" data-slide-to="3"></li>
+		    </ol>
+		    <div class="carousel-inner">
+		      <div class="carousel-item active" style="height: 700px;">
+		        <img src="https://i.etsystatic.com/6678962/r/il/fe0ae2/1509977792/il_570xN.1509977792_oaes.jpg" alt="...">
+		        <div class="carousel-caption d-none d-md-block">
+		          <h5 style="background-color: gray;">SPECIAL MOTHERS FLIP FLOPS</h5>
+		          <p  style="background-color: gray;">A mother's most accessible, most perfect weapon! <br> Thick plastic made to endure 100 hits at a time! <br>Perfect aerodinamics for a smooth throw at the target, <font color="#26FE01">100% success rate.</font></p>
+
+		        </div>
+		      </div>
+		      <div class="carousel-item" style="height: 700px;">
+		        <img src="https://images-na.ssl-images-amazon.com/images/I/71Z4UlGwdQL._UX679_.jpg" alt="...">
+		        <div class="carousel-caption d-none d-md-block">
+		          <h5>WOVEN BELT</h5>
+		          <p  style=" background-color: gray;">Alas! The perfect belt for fathers of troublesome kids! <br>THE WOVEN LEATHER BELT! <br> A thick leather belt so perfectly woven to NOT ONLY HURT, but also leave a mark!<font color="#26FE01"> 100% success rate.</font></p>
+		        </div>
+		      </div>
+
+
+		       <div class="carousel-item" style="height: 700px; background-image: url('https://rukminim1.flixcart.com/image/704/704/jj7givk0/dustpan/p/y/6/mb01121216-kr-store-original-imaf6tzx7emxr4z3.jpeg?q=70');">
+        			
+        		<div class="carousel-caption d-none d-md-block">
+		          <h5 style="background-color: gray;">The Broom!</h5>
+		          <p style="background-color: gray;">A great melee weapon for butt smacks! <br> Durable plastic, with a long stick! <br>Also comes with a dustpan for a running target. <br><font color="orange">70% success rate.</font></p>
+		        </div>
+		      </div>
+
+		      <div class="carousel-item" style="height: 700px;">
+		        <img src="https://images-na.ssl-images-amazon.com/images/I/91p9IyTMPtL._SX466_.jpg">
+		        <div class="carousel-caption d-none d-md-block">
+		          <h5 style="background-color: gray;">WOODEN SPOONS</h5>
+		          <p  style=" background-color: gray;">A wide variety of wooden spoons, perfect weapons for bottom smacks as well! <br>Provided with aerodinamic structure for easy throwing! <br> <font color="orange">40% success rate. </font></p>
+		        </div>
+		      </div>
+
+		       <div class="carousel-item" style="height: 700px;">
+		        <img src="https://images-na.ssl-images-amazon.com/images/I/61uyDmaIGhL._SX425_.jpg">
+		        <div class="carousel-caption d-none d-md-block">
+		          <h5 style="background-color: gray;">FLY SWATTER</h5>
+		          <p  style=" background-color: gray;">Made out of thin plastic, stings and leaves a mark when used on bare skin. <br> </p>
+		          <p style="background-color: white;"><font color="red"> 20% success rate. </font></p>
+		        </div>
+		      </div>
+
+		    </div>
+		    
+		      
+		    </div>
+		    <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev" >
+		      <span class="carousel-control-prev-icon" aria-hidden="true" style="color: black;"></span>
+		      <span class="sr-only">Previous</span>
+		    </a>
+		    <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+		      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+		      <span class="sr-only">Next</span>
+		    </a>
+		  </div>
+</div>
+</div>
+</div>
+
+
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </body>
 </html>
+

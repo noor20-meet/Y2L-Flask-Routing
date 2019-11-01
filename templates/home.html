@@ -27,18 +27,57 @@
 		  background-color: #111;
 		}
 
-		.active {
-		  background-color: #4CAF50;
+		* {
+		  box-sizing: border-box;
 		}
+
+		.column {
+		  float: left;
+		  width: 33.33%;
+		  padding: 5px;
+		}
+
+		/* Clearfix (clear floats) */
+		.row::after {
+		  content: "";
+		  clear: both;
+		  display: table;
+		}
+
+
 	</style>
 </head>
 <body>
 	<ul>
 		<li><a href="/"> Home </a></li>
 		<li><a href="{{url_for('store')}}"> Store </a> </li>
-		<li style="float: right;" class="active"><a href="{{url_for('about')}}" > About </a></li>
+		<li style="float: right; background-color: #4CAF50;
+		" ><a href="{{url_for('about')}}" > About </a></li>
 	</ul>
+	<div style="text-align: center;">
+		<div><font color="gray">
+			<h1> Can't control your children? </h1>
+			<h2> Are they too troublesome? </h2>
+			<h1> Don't know the right tools to show them who's in charge? </h1>
+		</font>
+		</div>
+		<img src="https://cdn.images.express.co.uk/img/dynamic/1/590x/secondary/Stressed-parents-294137.jpg">
+		<h1 style="font-size: 70px;"> You have come to the right place! </h1>
+		<h2> Our wide variety of products will help you control your children. Check out our store! </h2>
+	</div>
 
+
+	<div class="row">
+	  <div class="column">
+	    <img src="https://image.freepik.com/free-photo/man-smiling-with-thumbs-up_1187-2907.jpg" style="width:100%">
+	  </div>
+	  <div class="column">
+	    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT22z5rOu0BH4w1idvryngRYiCOXYuPZSAaDHSawASONjD9d6LY&s" alt="Forest" style="width:100%">
+	  </div>
+	  <div class="column">
+	    <img src="https://render.fineartamerica.com/images/rendered/default/print/6.375/8.000/break/images-medium-5/excited-mid-adult-woman-showing-thumbs-up-sign-on-white-globalstock.jpg" alt="Mountains" style="width:100%">
+	  </div>
+	</div>
 
 
 </body>
