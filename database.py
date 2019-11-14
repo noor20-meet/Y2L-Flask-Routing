@@ -21,14 +21,14 @@ def add_product(name, price, picture, description):
 
 # add_product("ben",7,"p","blabla")
 
-def delete_product(the_id):
-	session.query(Product).filter_by(id=the_id).delete()
+def delete_product(the_ID):
+	session.query(Product).filter_by(ID=the_ID).delete()
 	session.commit()
 
 # delete_product(1)
 
-def edit_product(the_id, description):
-	student_object= session.query(Product).filter_by(id=the_id)
+def edit_product(the_ID, description):
+	student_object= session.query(Product).filter_by(ID=the_ID).first()
 	student_object.description = description
 	session.commit()
 
@@ -42,8 +42,8 @@ def query_all():
 
 print(query_all())
 
-def query_id(the_id):
-	product_object=session.query(Product).filter_by(id=the_id)
+def query_ID(the_ID):
+	product_object=session.query(Product).filter_by(ID=the_ID)
 	return product_object
 
 def add_to_cart(productID):
