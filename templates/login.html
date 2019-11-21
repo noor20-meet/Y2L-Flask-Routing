@@ -2,10 +2,43 @@
 <html>
 <head>
 	<title> LOGIN PAGE </title>
-</head>
-<body>
+	<style>
+		ul {
+		  list-style-type: none;
+		  margin: 0;
+		  padding: 0;
+		  overflow: hidden;
+		  background-color: #333;
+		}
+		li {
+		  float: left;
+		}
 
-	<form method="post">
+		li a {
+		  display: block;
+		  color: white;
+		  text-align: center;
+		  padding: 14px 16px;
+		  text-decoration: none;
+		}
+
+		li a:hover:not(.active) {
+		  background-color: #111;
+		}
+	</style>
+</head>
+
+<body>
+	<ul>
+		<li><a href="/"> Home </a></li>
+		<li><a href="{{url_for('store')}}"> Store </a> </li>
+		<li style="float: right; background-color: #4CAF50;
+		" ><a href="{{url_for('about')}}" > About </a></li>
+		<li style="float: right;" > <a href="{{url_for('login')}}" > Login </a></li>
+	</ul>
+	<br>
+
+	<form action="/login" method="post" style="text-align: center;">
 		<div class="form-group">
 			<label for="first_name"> First name </label> <br>
 			<input type="text" class="form-control" id="first_name" placeholder="Enter name">
