@@ -38,17 +38,26 @@
 	</ul>
 	<br>
 
-	<form action="/login" method="post" style="text-align: center;">
-		<div class="form-group">
-			<label for="first_name"> First name </label> <br>
-			<input type="text" class="form-control" id="first_name" placeholder="Enter name">
-		</div>
-		<br>
-		<div class="form-group">
-			<label for="last_name"> Last name </label> <br>
-			<input type="text" class="form-control" id="last_name" placeholder="Enter last name">
-		</div>
-		<button type="submit" class="btn btn-primary">Submit</button>
-	</form>
+	<div class="row">
+		<div class="col-2" > <center>
+			<form action="/login" method="post" >
+				<div class="form-group">
+					<label for="first_name" style="font-size: 20px"> First name </label> <br>
+					<input type="text" class="form-control" id="first_name" placeholder="Enter name">
+				</div>
+				<br>
+				<div class="form-group">
+					<label for="last_name" style="font-size: 20px;"> Last name </label> <br>
+					<input type="text" class="form-control" id="last_name" placeholder="Enter last name">
+				</div>
+				<br>
+				<div class="form-group">
+					<label for="age" style="font-size: 20px;"> Age </label> <br>
+					<input type="text" class="form-control" id="age" placeholder="Enter your age">
+				</div>
+				<button type="submit" class="btn btn-primary" style="position:relative; display: block; margin:0 auto;">Submit</button>
+			</form>
+		</div></center>
+	</div>
 </body>
 </html>

@@ -25,16 +25,22 @@ def delete_product(the_ID):
 	session.query(Product).filter_by(ID=the_ID).delete()
 	session.commit()
 
-# delete_product(1)
+delete_product(1)
 
-def edit_product(the_ID, description):
+def edit_description(the_ID, description):
 	student_object= session.query(Product).filter_by(ID=the_ID).first()
 	student_object.description = description
 	session.commit()
 
-edit_product(1, "blablablablabla")
+def edit_price(the_ID, price):
+	student_object= session.query(Product).filter_by(ID=the_ID).first()
+	student_object.price = price
+	session.commit()
 
-
+def edit_picture(the_ID, picture):
+	student_object= session.query(Product).filter_by(ID=the_ID).first()
+	student_object.picture = picture
+	session.commit()
 
 def query_all():
 	products = session.query(Product).all()
