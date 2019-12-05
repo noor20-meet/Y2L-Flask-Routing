@@ -19,13 +19,13 @@ def add_product(name, price, picture, description):
 	session.add(product_object)
 	session.commit()
 
-# add_product("ben",7,"p","blabla")
 
 def delete_product(the_ID):
 	session.query(Product).filter_by(ID=the_ID).delete()
 	session.commit()
 
-delete_product(1)
+# delete_product(5)
+
 
 def edit_description(the_ID, description):
 	student_object= session.query(Product).filter_by(ID=the_ID).first()
@@ -57,5 +57,4 @@ def add_to_cart(productID):
 	session.add(cart_object)
 	session.commit()
 
-
-add_to_cart(1)
+edit_picture(2, "https://static.maccabi-tlv.co.il/wp-content/uploads/2017/06/MTA_201706140435508f3355cc6736195b0ff234a36909905f.jpg")

@@ -35,9 +35,11 @@
 	<ul>
 		<li><a href="/"> Home </a></li>
 		<li><a href="{{url_for('store')}}"> Store </a> </li>
+		<li><a href="{{url_for('cart')}}"> Cart </a> </li>
 		<li style="float: right; background-color: #4CAF50;
 		" ><a href="{{url_for('about')}}" > About </a></li>
 		<li style="float: right;" > <a href="{{url_for('login')}}" > Login </a></li>
+		<li style="float: right;" > <a href="{{url_for('portal')}}" > Admin </a></li>
 	</ul>
 
 	<br><br><br>
@@ -110,19 +112,21 @@
 </div>
 </div>
 </div> -->
+	<div class="bd-example text-center" style="position:relative; display: block; margin:0 auto; width: 50%;">
 		{%for product in all_products%}
 			<div class="carousel-inner">
 		      <div class="carousel-item active" style="height: 700px;">
-		        <img src="{{all_products.picture}}" alt="just a letter">
+		        <img src="{{product.picture}}" alt="mmmm">
 		        <div class="carousel-caption d-none d-md-block">
 		          <h5 style="background-color: gray;">{{product.name}}</h5>
 		          <p  style="background-color: gray;">{{product.description}}</font></p>
-
+		          <a href="/cart">
+		          <button type="button" class="btn btn-link">add to cart</button></a>
 		        </div>
 		      </div>
 		      </div>
 		      {%endfor%}
-		}
+		</div>
 
 
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
